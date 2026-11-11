@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>$TRUE | the truth mine</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1210'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%233ee0a0' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="mark" aria-hidden="true"></span>
+    <div>
+      <h1>$TRUE</h1>
+      <p class="tag">Mined from what the market believes. Burned when it stops.</p>
+    </div>
+  </div>
+  <div class="badges" id="badges" aria-live="polite"></div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Supply">
+    <div class="card supply" id="supply" aria-live="polite"></div>
+    <div class="card fund" id="fund"></div>
+  </section>
+
+  <section id="story" class="story card" hidden aria-live="polite"></section>
+
+  <section class="board">
+    <div class="col-main">
+      <div class="row-head">
+        <h2>The mine <small id="mineCount"></small></h2>
+        <div class="row-actions">
+          <button id="playStory" class="primary" type="button">&#9654; Play the story</button>
+        </div>
+      </div>
+      <p class="lede">Every claim is a market that never resolves. Bond NEAR to one and it mints $TRUE as long as the market keeps believing it. The dot is the price now, the ring is its running average, and only the average can mint.</p>
+      <div id="claims" class="claims"></div>
+    </div>
+    <aside class="col-side">
+      <div class="card" id="you"></div>
+      <div class="card" id="agents"></div>
+      <div class="card feed" id="feed"></div>
+    </aside>
+  </section>
+
+  <footer class="foot" id="foot"></footer>
+</main>
+
+<div id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-label="Claim detail">
+  <div class="drawer-in" id="drawerBody"></div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<div id="cap" hidden role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+<noscript><p style="padding:16px">$TRUE is a live view of a chain; it needs JavaScript.</p></noscript>
+</body>
+</html>

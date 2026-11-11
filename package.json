@@ -1,0 +1,35 @@
+{
+  "name": "true-mine",
+  "version": "1.0.0",
+  "description": "$TRUE: a token mined from claims that are believed and burned when they are not. Perpetual belief markets decide; agents check.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"dist/test/*.test.js\"",
+    "build:contract": "bash contracts/true-mine/build.sh",
+    "test:contract": "cd contracts/true-mine && cargo test",
+    "e2e": "node dist/test/e2e/e2e.js",
+    "demo": "node dist/scripts/demo.js",
+    "demo:offline": "node dist/scripts/demo.js --offline",
+    "warm": "node dist/scripts/warm.js",
+    "fetch-node": "node dist/scripts/fetch-node.js",
+    "test:ui": "node test/ui/ui-check.mjs",
+    "record": "node scripts/record-demo.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "near-api-js": "^7.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "near-sandbox": "^0.2.1",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
