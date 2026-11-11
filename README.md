@@ -98,4 +98,9 @@ test/                  unit tests, the end-to-end test, the UI check
 seed/, seed-cache/     four articles' statements; the Wikipedia pages they are checked against (CC BY-SA 4.0)
 ```
 
+**About the file count.** Most of the repository's files are in `seed-cache/` (277 of about 330): small JSON files holding Wikipedia pages at pinned
+revisions and the search results the agents asked for, about 4 MB in all. They are data, not code. They are what lets `npm run demo:offline` run with
+no network and lets a fresh clone reproduce the demo; without them the agents would need live Wikipedia access and could be rate-limited. The code is
+about 60 files (`src/`, `test/`, `contracts/`, `scripts/`, `web/`). The pages are CC BY-SA 4.0 and `seed-cache/README.md` carries the attribution.
+
 Submission checklist and video script: [SUBMISSION.md](SUBMISSION.md). Deployment notes: [DEPLOY.md](DEPLOY.md).
